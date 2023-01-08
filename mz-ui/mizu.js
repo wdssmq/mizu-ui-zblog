@@ -1,3 +1,4 @@
+/* global $ */
 $(function () {
   // tabs
   function fnToggleTab() {
@@ -5,7 +6,7 @@ $(function () {
       $(".tab-content").hide();
       $(".content-box-tabs a").removeClass("current");
       $(location.hash).show();
-      $('a[href="' + location.hash + '"]').addClass("current");
+      $("a[href=\"" + location.hash + "\"]").addClass("current");
     }
   }
   fnToggleTab();
@@ -59,6 +60,6 @@ $(function () {
     })
     .change(function () {
       fnReCover($(this));
-    })
+    });
     // .attr("readonly", 1);
 });
