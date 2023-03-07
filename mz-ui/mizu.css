@@ -13,7 +13,7 @@
   display: none;
 }
 
-i.w100 + * {
+i.w100+* {
   width: 100%;
 }
 
@@ -116,14 +116,56 @@ i.w100 + * {
   color: #fff; */
 }
 
-.readonly + *[readonly] {
+.readonly+*[readonly] {
   background-color: #fff;
   color: inherit;
   cursor: pointer;
 }
 
-.readonly + *[readonly]:hover {
+.readonly+*[readonly]:hover {
   cursor: pointer;
+}
+
+/* 弹出层 */
+.mz-alert-box {
+  min-width: 768px;
+  background-color: #fdfdfd;
+  border: 1px solid #ccc;
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  margin: 5px 0 10px;
+  padding: 10px;
+}
+
+.mz-alert-box.show {
+  display: block;
+  position: absolute;
+}
+
+.mz-alert-box-header {
+  /* padding: 0.5em 0.5em 0.5em 0.5em; */
+  padding-bottom: 5px;
+  border-bottom: 1px solid #bbb;
+  margin-bottom: 0.5em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.mz-alert-box-title {
+  cursor: move;
+  border: 1px solid #ccc;
+  font-size: 12px;
+  /* margin: 0 auto; */
+  padding: 5px 10px;
+  /* text-align: center; */
+}
+
+.mz-alert-box-footer {
+  text-align: center;
+  margin-top: 0.3em;
+  border-top: 1px solid #bbb;
+  padding-top: 0.3em;
 }
 
 /* Z-Blog 后台 */
